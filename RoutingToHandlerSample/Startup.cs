@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
 
 namespace RoutingToHandlerSample
 {
@@ -17,11 +18,11 @@ namespace RoutingToHandlerSample
         {
             app.UseRouter(routes =>
             {
-                routes.MapRoute("", (httpContext) =>
+                routes.MapRoute("/", (httpContext) =>
                 {
-                    var response = httpContext.Response;
-                    response.StatusCode = StatusCodes.Status200OK;
-                    return response.WriteAsync("Hello, World!", httpContext.RequestAborted);
+                    httpContext.Response.StatusCode = StatusCodes.Status200OK;
+
+                    return Task.CompletedTask;
                 });
             });
         }
