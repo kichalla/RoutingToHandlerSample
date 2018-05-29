@@ -5,10 +5,10 @@ namespace RoutingToHandlerSample.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/")]
+        [Route("/home/index")]
         public IActionResult Index()
         {
-            return StatusCode(StatusCodes.Status200OK);
+            return Content("Hello, World!");
         }
     }
 }
