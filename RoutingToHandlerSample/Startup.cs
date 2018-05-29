@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
-using System.Threading.Tasks;
+using RoutingToHandlerSample.Internal;
 
 namespace RoutingToHandlerSample
 {
@@ -12,6 +11,8 @@ namespace RoutingToHandlerSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore();
+
+            services.AddSingleton<IActionInvokerFactory, CustomActionInvokerFactory>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
