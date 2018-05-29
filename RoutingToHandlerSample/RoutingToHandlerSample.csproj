@@ -4,6 +4,12 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <TargetFramework Condition="'$(BenchmarksTargetFramework)' != ''">$(BenchmarksTargetFramework)</TargetFramework>
     <NETCoreAppMaximumVersion>99.9</NETCoreAppMaximumVersion>
+    <RestoreSources>
+      $(RestoreSources);
+      https://dotnet.myget.org/F/dotnet-core/api/v3/index.json;
+      https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json;
+      https://dotnet.myget.org/F/aspnetcore-tools/api/v3/index.json;
+    </RestoreSources>       
   </PropertyGroup>
 
   <ItemGroup>
