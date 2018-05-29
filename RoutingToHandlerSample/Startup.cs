@@ -12,6 +12,7 @@ namespace RoutingToHandlerSample
         {
             services.AddMvcCore();
 
+            services.AddSingleton<IActionDescriptorCollectionProvider, CustomActionDescriptorCollectionProvider>();
             services.AddSingleton<IActionInvokerFactory, CustomActionInvokerFactory>();
         }
 
