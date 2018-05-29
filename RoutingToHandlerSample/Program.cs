@@ -23,7 +23,7 @@ namespace RoutingToHandlerSample
                 .Build();
 
             return new WebHostBuilder()
-                .UseBenchmarksConfiguration(config)
+                .UseConfiguration(config)
                 .UseKestrel()
                 .UseStartup<Startup>()
                 ;
