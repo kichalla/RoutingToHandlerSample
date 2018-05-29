@@ -12,7 +12,10 @@ namespace RoutingToHandlerSample
         {
             services.AddMvcCore();
 
+            // Only enable for convetional routing
             //services.AddSingleton<IActionDescriptorCollectionProvider, CustomActionDescriptorCollectionProvider>();
+
+            // Enable for both conventional and attribute routing
             services.AddSingleton<IActionInvokerFactory, CustomActionInvokerFactory>();
         }
 

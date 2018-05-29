@@ -7,6 +7,7 @@ namespace RoutingToHandlerSample.Controllers
     {
         public IActionResult Index()
         {
+            //return Content("Hello, World!");
             throw new InvalidOperationException("Error in Customers.Index");
         }
     }

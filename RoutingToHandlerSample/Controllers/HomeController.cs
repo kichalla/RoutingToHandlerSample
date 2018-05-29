@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace RoutingToHandlerSample.Controllers
 {
@@ -8,7 +8,8 @@ namespace RoutingToHandlerSample.Controllers
         [Route("/home/index")]
         public IActionResult Index()
         {
-            return Content("Hello, World!");
+            //return Content("Hello, World!");
+            throw new InvalidOperationException("Error in Customers.Index");
         }
     }
 }
