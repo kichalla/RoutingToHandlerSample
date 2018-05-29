@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RoutingToHandlerSample.Internal;
 using System;
 
 namespace RoutingToHandlerSample.Controllers
 {
     public class HomeController : Controller
     {
+        [CustomAuthFilter]
         [Route("/home/index")]
         public IActionResult Index()
         {
