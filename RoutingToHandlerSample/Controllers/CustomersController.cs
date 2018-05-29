@@ -7,7 +7,7 @@ namespace RoutingToHandlerSample.Controllers
     {
         public IActionResult Index()
         {
-            return StatusCode(StatusCodes.Status200OK);
+            return Content("Hello, World!");
         }
     }
 }
