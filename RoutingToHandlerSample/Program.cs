@@ -17,8 +17,16 @@ namespace RoutingToHandlerSample
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+                .Build();
+
+            return new WebHostBuilder()
+                .UseBenchmarksConfiguration(config)
+                .UseKestrel()
+                .UseStartup<Startup>()
+                ;
+        }
     }
 }
