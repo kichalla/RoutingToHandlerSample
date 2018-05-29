@@ -16,7 +16,7 @@ namespace RoutingToHandlerSample
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseMvc();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
