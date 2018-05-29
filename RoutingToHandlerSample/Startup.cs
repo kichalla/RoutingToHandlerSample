@@ -16,12 +16,20 @@ namespace RoutingToHandlerSample
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.Map("/middleware", (subApp) =>
+            {
+                subApp.Run(httpContext =>
+                {
+                    httpContext.Response.StatusCode = StatusCodes.Status200OK;
+                    return Task.CompletedTask;
+                });
+            });
+
             app.UseRouter(routes =>
             {
                 routes.MapRoute("/", (httpContext) =>
                 {
                     httpContext.Response.StatusCode = StatusCodes.Status200OK;
-
                     return Task.CompletedTask;
                 });
             });
