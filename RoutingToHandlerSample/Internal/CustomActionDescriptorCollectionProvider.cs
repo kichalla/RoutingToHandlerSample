@@ -13,8 +13,8 @@ namespace RoutingToHandlerSample.Internal
         public CustomActionDescriptorCollectionProvider()
         {
             var actionDescriptor = new ControllerActionDescriptor();
-            actionDescriptor.MethodInfo = typeof(CustomersController).GetMethod(nameof(CustomersController.Index));
-            actionDescriptor.ActionName = nameof(CustomersController.Index);
+            actionDescriptor.MethodInfo = typeof(ConventionalRouteController).GetMethod(nameof(ConventionalRouteController.Index));
+            actionDescriptor.ActionName = nameof(ConventionalRouteController.Index);
 
             _actionDescriptors = new List<ActionDescriptor>();
             _actionDescriptors.Add(actionDescriptor);

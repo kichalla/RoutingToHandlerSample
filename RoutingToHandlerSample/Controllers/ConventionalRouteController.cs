@@ -4,14 +4,13 @@ using System;
 
 namespace RoutingToHandlerSample.Controllers
 {
-    public class HomeController : Controller
+    public class ConventionalRouteController : Controller
     {
         //[CustomAuthFilter]
-        [Route("/home/index")]
         public IActionResult Index()
         {
-            //return Content("Hello, World!");
-            throw new InvalidOperationException("Error in Customers.Index");
+            return Content("Hello, World!");
+            //throw new InvalidOperationException("Error in Customers.Index");
         }
     }
 }
