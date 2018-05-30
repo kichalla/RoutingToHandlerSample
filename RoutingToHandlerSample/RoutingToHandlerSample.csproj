@@ -5,17 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="StartupWithMiddleware.cs" />
-    <Compile Remove="StartupWithRouter.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="StartupWithMiddleware.cs" />
-    <None Include="StartupWithRouter.cs" />
   </ItemGroup>
 
   <ItemGroup>
