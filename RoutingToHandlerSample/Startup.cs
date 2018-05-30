@@ -16,7 +16,7 @@ namespace RoutingToHandlerSample
             // services.AddSingleton<IActionDescriptorCollectionProvider, CustomActionDescriptorCollectionProvider>();
 
             // Enable for both conventional and attribute routing
-            //services.AddSingleton<IActionInvokerFactory, CustomActionInvokerFactory>();
+            services.AddSingleton<IActionInvokerFactory, CustomActionInvokerFactory>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
