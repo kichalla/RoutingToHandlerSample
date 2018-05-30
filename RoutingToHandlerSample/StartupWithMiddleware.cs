@@ -14,7 +14,7 @@ namespace RoutingToHandlerSample
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.Map("/middleware", (subApp) =>
+            app.Map("/", (subApp) =>
             {
                 subApp.Run(httpContext =>
                 {
