@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using RoutingToHandlerSample.Internal;
 using System.Threading.Tasks;
-using using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 
 namespace RoutingToHandlerSample
 {
-    public class StartupWithMiddleware
+    public class StartupWithRouter
     {
         public void ConfigureServices(IServiceCollection services)
         {
@@ -16,9 +16,9 @@ namespace RoutingToHandlerSample
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.Map("/middleware", (subApp) =>
+            app.UseRouter(routes =>
             {
-                subApp.Run(httpContext =>
+                routes.MapRoute("/", (httpContext) =>
                 {
                     httpContext.Response.StatusCode = StatusCodes.Status200OK;
                     return Task.CompletedTask;
