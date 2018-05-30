@@ -18,8 +18,9 @@ namespace RoutingToHandlerSample
             {
                 subApp.Run(httpContext =>
                 {
-                    httpContext.Response.StatusCode = StatusCodes.Status200OK;
-                    return Task.CompletedTask;
+                    var response = httpContext.Response;
+                    response.StatusCode = StatusCodes.Status200OK;
+                    return response.WriteAsync("Hello, World!");
                 });
             });
         }
