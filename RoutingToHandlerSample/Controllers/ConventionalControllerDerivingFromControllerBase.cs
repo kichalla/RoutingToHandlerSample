@@ -20,14 +20,14 @@ namespace RoutingToHandlerSample.Controllers
         //    return HttpContext.Response.WriteAsync("Hello, World!");
         //}
 
-        public IActionResult Index()
-        {
-            return StatusCode(StatusCodes.Status200OK);
-        }
-
-        //public Task Index()
+        //public IActionResult Index()
         //{
-        //    return Task.CompletedTask;
+        //    return StatusCode(StatusCodes.Status200OK);
         //}
+
+        public Task Index()
+        {
+            return Task.CompletedTask;
+        }
     }
 }
