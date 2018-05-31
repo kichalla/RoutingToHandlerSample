@@ -10,7 +10,10 @@ namespace RoutingToHandlerSample
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore();
+            services.AddMvcCore(o =>
+            {
+                o.Filters.Clear();
+            });
 
             // Only enable for convetional routing
             // services.AddSingleton<IActionDescriptorCollectionProvider, CustomActionDescriptorCollectionProvider>();
