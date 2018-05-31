@@ -13,7 +13,7 @@
     },
     "Port": 8080
   },
-  "PlaintextRouting": {
-    "Path": "/plaintext"
+  "ConventionalRoute": {
+    "Path": "/ConventionalRoute/Index"
   }
 }
