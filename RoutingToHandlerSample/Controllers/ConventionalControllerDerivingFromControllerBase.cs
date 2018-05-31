@@ -6,12 +6,12 @@ namespace RoutingToHandlerSample.Controllers
 {
     public class ConventionalControllerDerivingFromControllerBase : ControllerBase
     {
-        ////[CustomAuthFilter]
-        //public IActionResult Index()
-        //{
-        //    return Content("Hello, World!");
-        //    //throw new InvalidOperationException("Error in Customers.Index");
-        //}
+        //[CustomAuthFilter]
+        public IActionResult Index()
+        {
+            return Content("Hello, World!");
+            //throw new InvalidOperationException("Error in Customers.Index");
+        }
 
         //public Task Index()
         //{
@@ -25,9 +25,9 @@ namespace RoutingToHandlerSample.Controllers
         //    return StatusCode(StatusCodes.Status200OK);
         //}
 
-        public Task Index()
-        {
-            return Task.CompletedTask;
-        }
+        //public Task Index()
+        //{
+        //    return Task.CompletedTask;
+        //}
     }
 }
