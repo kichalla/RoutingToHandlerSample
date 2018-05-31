@@ -1,0 +1,19 @@
+{
+    "Default": {
+        "Client": "Wrk",
+        "PresetHeaders": "Plaintext",
+        "ClientProperties": {
+          "ScriptName": "pipeline",
+          "PipelineDepth": 16
+        },
+        "Source": {
+          "Repository": "https://github.com/kichalla/RoutingToHandlerSample.git",
+          "BranchOrCommit": "master",
+          "Project": "RoutingToHandlerSample/RoutingToHandlerSample.csproj"
+        },
+        "Port": 8080
+      },
+      "ConventionalRoute": {
+        "Path": "/ConventionalRoute/Index"
+      }
+}
