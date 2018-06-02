@@ -21,7 +21,7 @@ namespace RoutingToHandlerSample
             //    return response.WriteAsync("Hello, World!");
             //});
 
-            app.Map("/foobar", (subApp) =>
+            app.Map("/middleware", (subApp) =>
             {
                 subApp.Run(httpContext =>
                 {

@@ -8,12 +8,15 @@
     },
     "Source": {
       "Repository": "https://github.com/kichalla/RoutingToHandlerSample.git",
-      "BranchOrCommit": "master",
+      "BranchOrCommit": "kichalla/route.to.middleware",
       "Project": "RoutingToHandlerSample/RoutingToHandlerSample.csproj"
     },
     "Port": 8080
   },
   "ConventionalRoute": {
     "Path": "/ConventionalRoute/Index"
+  },
+  "RouteToMiddleware": {
+    "Path": "/middleware"
   }
 }
