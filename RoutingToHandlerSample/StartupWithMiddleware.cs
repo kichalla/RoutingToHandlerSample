@@ -14,11 +14,21 @@ namespace RoutingToHandlerSample
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.Run(httpContext =>
+            //app.Run(httpContext =>
+            //{
+            //    var response = httpContext.Response;
+            //    response.StatusCode = StatusCodes.Status200OK;
+            //    return response.WriteAsync("Hello, World!");
+            //});
+
+            app.Map("/foobar", (subApp) =>
             {
-                var response = httpContext.Response;
-                response.StatusCode = StatusCodes.Status200OK;
-                return response.WriteAsync("Hello, World!");
+                subApp.Run(httpContext =>
+                {
+                    var response = httpContext.Response;
+                    response.StatusCode = StatusCodes.Status200OK;
+                    return response.WriteAsync("Hello, World!");
+                });
             });
         }
     }
