@@ -10,7 +10,7 @@ namespace RoutingToHandlerSample
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvcCore();
+            services.AddMvcCore();
 
             //services.AddMvcCore(o =>
             //{
