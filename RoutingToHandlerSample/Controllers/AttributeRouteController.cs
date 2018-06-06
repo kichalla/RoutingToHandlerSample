@@ -8,7 +8,7 @@ namespace RoutingToHandlerSample.Controllers
 {
     public class AttributeRouteController : Controller
     {
-        //[CustomAuthFilter]
+        [CustomAuthFilter]
         [Route("/attributeroute/index")]
         public IActionResult Index()
         {

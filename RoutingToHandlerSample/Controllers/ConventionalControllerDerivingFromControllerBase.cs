@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RoutingToHandlerSample.Internal;
 using System.Threading.Tasks;
 
 namespace RoutingToHandlerSample.Controllers
 {
     public class ConventionalControllerDerivingFromControllerBase : ControllerBase
     {
-        //[CustomAuthFilter]
+        [CustomAuthFilter]
         public IActionResult Index()
         {
             return Content("Hello, World!");

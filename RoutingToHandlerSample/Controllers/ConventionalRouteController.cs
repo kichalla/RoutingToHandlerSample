@@ -9,7 +9,7 @@ namespace RoutingToHandlerSample.Controllers
 {
     public class ConventionalRouteController : Controller
     {
-        //[CustomAuthFilter]
+        [CustomAuthFilter]
         public IActionResult Index()
         {
             return Content("Hello, World!");
