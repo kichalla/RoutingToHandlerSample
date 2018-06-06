@@ -8,12 +8,21 @@
     },
     "Source": {
       "Repository": "https://github.com/kichalla/RoutingToHandlerSample.git",
-      "BranchOrCommit": "master",
+      "BranchOrCommit": "kichalla/temp",
       "Project": "RoutingToHandlerSample/RoutingToHandlerSample.csproj"
     },
     "Port": 8080
   },
   "ConventionalRoute": {
     "Path": "/ConventionalRoute/Index"
+  },
+  "AttributeRoute": {
+    "Path": "/attributeroute/Index"
+  },
+  "ConventionalRouteToControllerBase": {
+    "Path": "/ConventionalControllerDerivingFromControllerBase/Index"
+  },
+  "AttributeRouteControllerDerivingFromControllerBase": {
+    "Path": "/AttributeRouteControllerDerivingFromControllerBase/Index"
   }
 }
