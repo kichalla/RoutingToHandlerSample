@@ -8,20 +8,20 @@ namespace RoutingToHandlerSample.Controllers
 {
     public class AttributeRouteController : Controller
     {
-        ////[CustomAuthFilter]
-        //[Route("/attributeroute/index")]
-        //public IActionResult Index()
-        //{
-        //    return Content("Hello, World!");
-        //    //throw new InvalidOperationException("Error in Customers.Index");
-        //}
-
+        //[CustomAuthFilter]
         [Route("/attributeroute/index")]
-        public Task Index()
+        public IActionResult Index()
         {
-            HttpContext.Response.StatusCode = StatusCodes.Status200OK;
-
-            return HttpContext.Response.WriteAsync("Hello, World!");
+            return Content("Hello, World!");
+            //throw new InvalidOperationException("Error in Customers.Index");
         }
+
+        //[Route("/attributeroute/index")]
+        //public Task Index()
+        //{
+        //    HttpContext.Response.StatusCode = StatusCodes.Status200OK;
+
+        //    return HttpContext.Response.WriteAsync("Hello, World!");
+        //}
     }
 }
