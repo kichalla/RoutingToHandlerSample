@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace RoutingToHandlerSample.Internal
 {
     public class CustomActionInvoker : IActionInvoker
     {
+        private static readonly byte[] _helloWorldPayload = Encoding.UTF8.GetBytes("Hello, World!");
         private readonly ActionContext _actionContext;
 
         public CustomActionInvoker(ActionContext actionContext)
@@ -16,8 +18,12 @@ namespace RoutingToHandlerSample.Internal
 
         public Task InvokeAsync()
         {
-            _actionContext.HttpContext.Response.StatusCode = StatusCodes.Status200OK;
-            return _actionContext.HttpContext.Response.WriteAsync("Hello, World!");
+            var response = _actionContext.HttpContext.Response;
+            var payloadLength = _helloWorldPayload.Length;
+            response.StatusCode = 200;
+            response.ContentType = "text/plain";
+            response.ContentLength = payloadLength;
+            return response.Body.WriteAsync(_helloWorldPayload, 0, payloadLength);
         }
     }
 }

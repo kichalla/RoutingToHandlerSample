@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using RoutingToHandlerSample.Internal;
 using System;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace RoutingToHandlerSample.Controllers
 {
